@@ -17,9 +17,14 @@ const App = () => {
 
   const [treasureLocation, setTreasureLocation]= useState( Math.floor(Math.random() * board.length))
 
+  const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
+
   const handleGamePlay = (currentSquare) => {
     if(currentSquare === treasureLocation){
       board[currentSquare] = "💎"
+      setBoard([...board])
+    } else if (currentSquare === bombLocation){
+      board[currentSquare] = "💣"
       setBoard([...board])
     } else {
       board[currentSquare] = "🌴"
