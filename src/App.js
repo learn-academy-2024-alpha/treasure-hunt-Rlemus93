@@ -16,8 +16,10 @@ const App = () => {
   ])
 
   const [treasureLocation, setTreasureLocation]= useState( Math.floor(Math.random() * board.length))
+  console.log(treasureLocation, "shiny")
 
   const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
+  console.log(bombLocation, "boom")
 
   const handleGamePlay = (currentSquare) => {
     if(currentSquare === treasureLocation){
@@ -32,6 +34,23 @@ const App = () => {
     }
   }
 
+  const handlePlayAgain = () => {
+
+      setTreasureLocation( Math.floor(Math.random() * board.length))
+      setBombLocation(Math.floor(Math.random() * board.length))
+      setBoard([ 
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"])
+  }
+  
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -41,6 +60,7 @@ const App = () => {
         key={index} handleGamePlay={handleGamePlay}/>
       })}
       </div>
+      <button onClick={handlePlayAgain}>Play Again</button>
     </>
   )
 }
