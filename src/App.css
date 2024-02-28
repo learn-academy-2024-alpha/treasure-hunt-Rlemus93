@@ -2,8 +2,17 @@ h1 {
   text-align: center;
 }
 
+.board {
+  display: flex;
+  flex-wrap:wrap;
+  width: 610px;
+  margin: 0 auto;
+}
+
 .square {
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  font-size: 170px;
+  text-align: center;
 }
