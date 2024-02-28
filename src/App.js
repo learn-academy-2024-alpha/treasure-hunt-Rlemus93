@@ -15,8 +15,9 @@ const App = () => {
     "?"
   ])
 
-  const handleGamePlay = (currentsquare) => {
-    alert(currentsquare)
+  const handleGamePlay = (currentSquare) => {
+    board[currentSquare] = "🌴"
+    setBoard([...board])
   }
 
   return (
