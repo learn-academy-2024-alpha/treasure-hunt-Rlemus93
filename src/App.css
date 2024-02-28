@@ -2,6 +2,13 @@ h1 {
   text-align: center;
 }
 
+.board {
+  display: flex;
+  flex-wrap:wrap;
+  width: 610px;
+  margin: 0 auto;
+}
+
 .square {
   height: 200px;
   width: 200px;
